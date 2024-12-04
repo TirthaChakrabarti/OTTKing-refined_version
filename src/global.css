@@ -91,6 +91,7 @@ a {
 .animation {
   width: 92%; 
   height: 480px; 
+  /* margin-bottom: 3rem; */
   display: flex; 
   justify-content: center;
   align-items: center;
@@ -175,10 +176,98 @@ a {
   color: lightgray;
 }
 
+/* Moving Logo Section  */
+
+.container-fluid {
+  width: 100%;
+  padding: 0 15px;
+  margin: 2rem 0 2rem 0;
+  /* max-width: 90%; */
+  box-sizing: border-box;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider-wrapper {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.slider-container {
+  margin: 20px auto;
+  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.logo {
+  max-height: 110px;
+  max-width: 100%;
+  transition: all 0.3s linear, box-shadow 0.3s linear;
+  border-radius: 50%;
+  border: 2px solid #ffd700;
+  background-color: #ffffff;
+}
+
+.logo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 12px rgba(255, 215, 0, 0.9);
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  color: #ffd700;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}
+
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background: #ffd700;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #f0e68c; /* Lighter golden on hover */
+  transform: scale(1.2);
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 16px;
+  color: #1e3c72; /* Bluish color for the arrow icons */
+  opacity: 1;
+}
+
 /* Movie section (slider) */
 
 .movie-section-parent {
-  width: 97%;
+  width: 100%;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -269,3 +358,681 @@ a {
 .arrow:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+
+/* Banner One */
+
+.banner-one {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.banner-details {
+  flex: 1;
+  height: 240px;
+  padding: 0 1rem 1rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-details h1 {
+  font-size: 2.5rem;
+  padding-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-details p {
+  font-size: 1.25rem;
+  line-height: 1.3;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); 
+  color: #ccc;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.banner-details-button {
+  width: 140px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid cyan;
+  background: linear-gradient(135deg, #4658ac, #334b8d);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: white;
+  transition: all 0.3s linear;
+}
+
+.banner-details-button:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.5);
+  color: cyan;
+}
+
+.banner-video {
+  flex: 1;
+  height: 260px;
+  background-color: rgba(0, 0, 0, 0.5); 
+  border-radius: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+.banner-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Banner Two  */
+
+.banner-two {
+  margin-top: 3rem;
+  width: 100%;
+  /* height: 65vh; */
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: #fff; 
+}
+
+/* Adding a gradient overlay for better readability */
+.banner-two::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background: rgba(19, 20, 27, 0.4);
+  z-index: 1;
+}
+
+.banner-two-details {
+  position: relative;
+  z-index: 2; 
+  padding: 2rem;
+}
+
+.banner-two-details p {
+  margin: 0;
+  padding: 5px 0;
+  font-size: 1.5rem; 
+  font-weight: 500;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6); /* Add some text shadow */
+}
+
+.banner-two-details p:first-child {
+  font-size: 2rem; 
+  font-weight: 500;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.banner-two-details p:nth-child(2) {
+  font-size: 3.2rem; /* Larger size for logo/title */
+  font-weight: bolder;
+  color: rgb(69, 69, 184);
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.banner-two-button {
+  margin-top: 10px;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-two-button Button {
+  width: 160px;
+  height: 50px;
+  padding: 8px 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2b3a7e, #1d2f61); /* Dark blue gradient for the button */
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.banner-two-button Button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.banner-two-button Button:focus {
+  outline: none;
+}
+
+/* Banner Three  */
+
+.banner-three {
+  width: 100%;
+  height: 300px;
+  margin-top: 3rem;
+  background: linear-gradient(135deg, #1e3a8a, #0d2b58, #020d29); /* Dark blue gradient */
+  color: white;
+  display: flex;
+  flex-direction: row; /* Row layout */
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+.banner-three:hover {
+  background: linear-gradient(135deg, #020d29, #0d2b58, #1e3a8a); /* Reverse gradient on hover */
+}
+
+.banner-three div:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+}
+
+.banner-three:hover div:first-child {
+  opacity: 0.5;
+}
+
+.banner-three-details {
+  z-index: 2;
+  flex: 2; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.banner-three-details p:first-child {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff; 
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.banner-three-details p:nth-child(2) {
+  font-size: 1.8rem;
+  margin: 10px 0;
+  color: #d6e7f7; /* Lighter blue text for subheading */
+}
+
+.banner-three-details p:nth-child(3) {
+  font-size: 1.4rem;
+  color: #63b3f4; /* Light blue for the date */
+}
+
+.banner-three-logo {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center logo */
+  animation: bounce 2s infinite; /* Add a bounce effect */
+}
+
+.banner-three-logo img {
+  border-radius: 50%;
+  width: 240px; 
+  height: 230px;
+  opacity: 0.9; 
+  transition: transform 0.3s ease;
+}
+
+.banner-three-logo img:hover {
+  transform: scale(1.05);
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+}
+
+.banner-three-button {
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-three-button Button {
+  padding: 12px 25px;
+  background: linear-gradient(135deg, #2b3a7e, #1d2f61); /* Dark blue gradient for the button */
+  border: 1px solid #6a7ac1;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  margin: 0 20px;
+}
+
+.banner-three-button Button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.5);
+}
+
+.banner-three-button Button:focus {
+  outline: none;
+}
+
+/* Large Small Section  */
+
+.large-small-section {
+  display: flex;
+  gap: 10px; /* Space between the left and right sections */
+  padding: 40px;
+  padding-bottom: 0;
+  background-color: transparent;
+  height: 450px; /* Ensure consistent height for both sections */
+}
+
+.large-small-subsection {
+  height: 100%; /* Both sections should have equal height */
+}
+
+.left-large {
+  flex: 1; /* Left section takes 50% width */
+  display: flex;
+  align-items: stretch; /* Ensure the card stretches to fill the container */
+}
+
+.large-small-card {
+  width: 100%;
+  height: 100%; /* Fill the height of the left-large container */
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.large-small-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the card area */
+  border-radius: 5px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.large-small-poster:hover {
+  transform: scale(1.08); /* Zoom effect */
+}
+
+.right-large {
+  flex: 1; /* Right section takes 50% width */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 10px; /* Spacing between small cards */
+}
+
+/* General styles for both large and small cards */
+.large-small-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Poster image styles for both large and small cards */
+.large-small-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+
+.large-small-card:hover .large-small-poster {
+  transform: scale(1.05);  /* Zoom effect on hover */
+}
+
+/* Common text styles */
+.large-small-card-text {
+  position: absolute;
+  bottom: 10px;  /* Positioned at the bottom */
+  left: 10px;    /* Positioned to the left */
+  color: white;
+  text-align: left;
+  padding: 0 10px;
+  margin: 0;
+}
+
+/* Font size adjusts based on card size */
+.large-small-card-text p:first-of-type {
+  font-size: calc(0.9rem + 0.8vw); /* Smaller, more responsive font size */
+  margin: 0;
+  font-weight: 500; /* Slightly lighter weight */
+}
+
+.large-small-card-text p:nth-of-type(2) {
+  font-size: calc(0.75rem + 0.6vw); /* Even smaller font size for subtitle */
+  margin: 5px 0 0;
+  font-weight: 400; /* Lighter weight for the subtitle */
+}
+
+/* Large card specific styles */
+.left-large .large-small-card {
+  width: 100%; /* Full width for the large card */
+  height: 100%; /* Full height for the large card */
+}
+
+/* Small card specific styles */
+.right-large .large-small-card {
+  width: 100%; /* Full width for the small cards */
+  height: 220px; /* Set a specific height for the small cards */
+}
+
+/* Heading styles */
+.large-small-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 40px;
+  color: gold; /* Eye-catching color for the heading */
+}
+
+
+
+/* Small Two Lines Section  */
+
+.smallTwoLinesCardsection-parent {
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 480px; 
+}
+
+.smallTwolinesCardSection-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 35px;
+  color: gold;
+}
+
+.smallTwolinesCardSection {
+  height: 100%;
+  padding: 35px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+
+/* Flat card section  */
+
+.cardlist-three-parent {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-weight: bolder;
+  color: gold;
+  margin-bottom: 0;
+}
+
+.cardlist-three-title {
+  margin-left: 45px;
+}
+
+.cardlist-three-wrapper {
+  /* margin-top: 2rem; */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 95vw;
+  overflow: hidden;
+  padding: 0 30px;
+  /* border: 1px solid; */
+}
+
+.cardlist-three {
+  height: auto;
+  width: max-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-top: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.cardlist-three div {
+  width: 270px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 6px 6px 8px rgba(31, 94, 255, 0.5);
+  transition: all 0.4s linear;
+  flex-shrink: 0;
+}
+
+.cardlist-three div:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 10px rgba(71, 117, 234, 0.5);
+}
+
+.cardlist-three div img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill; 
+  border-radius: 10px; 
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80px;
+  width: 25px;
+  background-color: rgba(65, 75, 254, 0.5);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8em;
+  font-weight: 300;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow:hover {
+  background-color: rgb(68, 95, 149);
+}
+
+/* Static Section  */
+
+.static-cardlist-parent {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  font-weight: bolder;
+  color: white;
+  margin-bottom: 0;
+}
+
+.static-cardlist-title {
+  margin-left: 45px;
+  color: gold;
+}
+
+.static-cardlist-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr)); /* Dynamic columns */
+  justify-content: center; /* Center the grid */
+  align-items: center;
+  padding: 20px;
+}
+
+.static-cardlist {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping to form multiple rows */
+  gap: 25px;
+  justify-content: center; /* Center the cards horizontally */
+  padding: 10px;
+}
+
+.static-cardlist div {
+  width: 268px;
+  height: 200px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 6px 6px 8px rgba(31, 94, 255, 0.5);
+  transition: all 0.4s linear;
+}
+
+.static-cardlist div:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 10px rgba(71, 117, 234, 0.5);
+}
+
+.static-cardlist div img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+/* Footer  */
+
+.netflix-footer {
+  width: 100%;
+  /* height: 500px; */
+  /* background-color: rgb(14, 13, 13);  */
+  background: black;
+  color: white;
+  bottom: 0;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.footer-top {
+  /* text-align: center; */
+  margin-left: 125px;
+  margin-bottom: 20px;
+}
+
+.contact-link {
+  color: #919090;
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  list-style: none;
+  padding: 0;
+  width: 150px;
+}
+
+.footer-column li {
+  margin: 8px 0;
+}
+
+.footer-column a {
+  color: #757575;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.footer-note {
+  color: #757575;
+}
+
